@@ -1,10 +1,15 @@
 import { useIsOnline } from "./hooks/customHooks";
+import { useMousePointer } from "./hooks/mousePointer";
 
 function App() {
   const isOnline = useIsOnline();
-
+  const mousePointer = useMousePointer();
   return (
-    isOnline ? "You are online" : "You are offline"
+    <div>
+      {isOnline ? "You are online" : "You are offline"}
+      Position:{mousePointer.x}and{mousePointer.y}
+    </div>
+
   )
 }
 
