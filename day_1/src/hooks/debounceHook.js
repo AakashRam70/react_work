@@ -1,4 +1,3 @@
-// this is very important hook 
 import { useEffect, useState } from 'react';
 function useDebounce(value, timeout) {
     const [debouncedValue, setDebouncedValue] = useState(value)
@@ -11,6 +10,6 @@ function useDebounce(value, timeout) {
         return () => {
             clearTimeout(timeoutNumber);
         }
-    },(value))
-    return debouncedValue
+    }, (value))
+    return debouncedValue;
 }
